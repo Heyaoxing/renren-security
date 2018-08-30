@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- 生成文件以后，请把表配置删除！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
+    <context id="context1">
+
+        <commentGenerator>
+            <!--  关闭自动生成的注释  -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+      <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/renren_security" userId="root"
+                        password="123456"/>
+        <javaModelGenerator targetPackage="io.renren.modules.sys.entity"
+                            targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="mapper/sys"
+                         targetProject="src/main/resources"/>
+        <javaClientGenerator targetPackage="io.renren.modules.sys.dao"
+                             targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!-- mvn mybatis-generator:generate  -->
+        <!--<table tableName="mb_household_card"-->
+               <!--domainObjectName="HouseholdCard"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+
+        <!--</table>-->
+
+        <table tableName="chinaareainfo" domainObjectName="ChinaAreaInfo"></table>
+<!--<table tableName="mb_cabinet_management" domainObjectName="CabinetManagement" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_community_manage" domainObjectName="CommunityManage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_community_manage_account" domainObjectName="CommunityManageAccount" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_link_house_number" domainObjectName="LinkHouseNumber" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_buildinginfo" domainObjectName="BuildingInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_card_num" domainObjectName="CardNum" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_channelinfo" domainObjectName="ChannelInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_courier" domainObjectName="Courier" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_doorcardinfo" domainObjectName="DoorCardInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_household_phone" domainObjectName="HouseholdPhone" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_module" domainObjectName="Module" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_role_module" domainObjectName="RoleModule" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="mb_user_role" domainObjectName="UserRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+       enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+    </context>
+
+</generatorConfiguration>

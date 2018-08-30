@@ -44,7 +44,7 @@ public class SysGeneratorController {
 		
 		return R.ok().put("page", pageUtil);
 	}
-	
+
 	/**
 	 * 生成代码
 	 */

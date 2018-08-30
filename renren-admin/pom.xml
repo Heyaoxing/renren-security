@@ -74,6 +74,7 @@
 			<artifactId>qiniu-java-sdk</artifactId>
 			<version>${qiniu.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.aliyun.oss</groupId>
 			<artifactId>aliyun-sdk-oss</artifactId>
@@ -106,6 +107,23 @@
 				<configuration>
 					<skipTests>true</skipTests>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>${version.mybatis.generator}</version>
+				<configuration>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+					<configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>${mysql.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>
