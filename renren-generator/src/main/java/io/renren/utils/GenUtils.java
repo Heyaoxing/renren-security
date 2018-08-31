@@ -24,6 +24,8 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.WordUtils;
+import org.apache.tools.zip.ZipEntry;
+import org.apache.tools.zip.ZipOutputStream;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
@@ -32,8 +34,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 /**
  * 代码生成器   工具类
@@ -188,7 +188,7 @@ public class GenUtils {
 	 * 获取文件名
 	 */
 	public static String getFileName(String template, String className, String packageName, String moduleName) {
-		String packagePath = "main" + File.separator + "java" + File.separator;
+		String packagePath = "src" + File.separator +"main" + File.separator + "java" + File.separator;
 		if (StringUtils.isNotBlank(packageName)) {
 			packagePath += packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
 		}
@@ -214,16 +214,16 @@ public class GenUtils {
 		}
 
 		if (template.contains("Dao.xml.vm" )) {
-			return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+			return "src" + File.separator +"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
 		}
 
 		if (template.contains("list.html.vm" )) {
-			return "main" + File.separator + "resources" + File.separator + "templates" + File.separator
+			return "src" + File.separator +"main" + File.separator + "resources" + File.separator + "templates" + File.separator
 					+ "modules" + File.separator + moduleName + File.separator + className.toLowerCase() + ".html";
 		}
 
 		if (template.contains("list.js.vm" )) {
-			return "main" + File.separator + "resources" + File.separator + "statics" + File.separator + "js" + File.separator
+			return "src" + File.separator +"main" + File.separator + "resources" + File.separator + "statics" + File.separator + "js" + File.separator
 					+ "modules" + File.separator + moduleName + File.separator + className.toLowerCase() + ".js";
 		}
 
