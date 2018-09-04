@@ -1,7 +1,7 @@
-package io.renren.service;
+package io.renren.modules.sys.service.impl;
 
-import io.renren.dao.SysGeneratorDao;
-import io.renren.utils.GenUtils;
+import io.renren.common.utils.GenUtils;
+import io.renren.modules.sys.dao.SysGeneratorDao;
 import org.apache.commons.io.IOUtils;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
@@ -9,7 +9,9 @@ import org.apache.tools.zip.ZipOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;

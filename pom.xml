@@ -20,6 +20,7 @@
         <module>renren-admin</module>
         <module>renren-api</module>
         <module>renren-generator</module>
+        <module>saury-generator</module>
     </modules>
 
     <properties>
@@ -29,6 +30,7 @@
         <junit.version>4.12</junit.version>
         <jedis.version>2.9.0</jedis.version>
         <druid.version>1.1.10</druid.version>
+        <commons.configuration.version>1.10</commons.configuration.version>
         <mybatisplus.version>2.1.9</mybatisplus.version>
 		<mybatisplus.spring.boot.version>1.0.5</mybatisplus.spring.boot.version>
         <mysql.version>5.1.38</mysql.version>
@@ -145,6 +147,14 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons.codec.version}</version>
         </dependency>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>${commons.configuration.version}</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>

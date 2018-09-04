@@ -13,7 +13,7 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/renren_security?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://localhost:3306/saury-generator?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: 123456
     jackson:
