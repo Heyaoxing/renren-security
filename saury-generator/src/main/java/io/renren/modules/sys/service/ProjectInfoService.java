@@ -16,5 +16,12 @@ import java.util.Map;
 public interface ProjectInfoService extends IService<ProjectInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 获取项目详情
+     * @param projectId
+     * @return
+     */
+    ProjectInfoEntity getDetail(Long projectId);
 }
 

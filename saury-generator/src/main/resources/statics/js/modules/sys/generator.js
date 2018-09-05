@@ -45,13 +45,14 @@ var vm = new Vue({
 	el:'#rrapp',
 	data:{
 		q:{
-			tableName: null
+			tableName: null,
+            projectId:0
 		}
 	},
 	methods: {
 		query: function () {
 			$("#jqGrid").jqGrid('setGridParam',{ 
-                postData:{'tableName': vm.q.tableName},
+                postData:{'tableName': vm.q.tableName,'projectId': vm.q.projectId},
                 page:1 
             }).trigger("reloadGrid");
 		},

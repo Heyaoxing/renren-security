@@ -11,7 +11,7 @@
         </commentGenerator>
 
       <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/renren_security" userId="root"
+                        connectionURL="jdbc:mysql://localhost:3306/saury-generator" userId="root"
                         password="123456"/>
         <javaModelGenerator targetPackage="io.renren.modules.sys.entity"
                             targetProject="src/main/java"/>
@@ -31,7 +31,9 @@
 
         <!--</table>-->
 
-        <table tableName="chinaareainfo" domainObjectName="ChinaAreaInfo"></table>
+        <!--<table tableName="menu_template" domainObjectName="MenuTemplate"></table>-->
+        <!--<table tableName="project_info" domainObjectName="ProjectInfo"></table>-->
+        <!--<table tableName="project_version_info" domainObjectName="ProjectVersionInfo"></table>-->
 <!--<table tableName="mb_cabinet_management" domainObjectName="CabinetManagement" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
        enableSelectByExample="false" selectByExampleQueryId="false"></table>
 <table tableName="mb_community_manage" domainObjectName="CommunityManage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"

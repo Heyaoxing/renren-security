@@ -1,7 +1,11 @@
 package io.renren.modules.sys.service.impl;
 
 import io.renren.common.utils.GenUtils;
+import io.renren.modules.sys.dao.MenuTemplateDao;
+import io.renren.modules.sys.dao.ProjectInfoDao;
 import io.renren.modules.sys.dao.SysGeneratorDao;
+import io.renren.modules.sys.entity.MenuTemplateEntity;
+import io.renren.modules.sys.entity.ProjectInfoEntity;
 import org.apache.commons.io.IOUtils;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
@@ -15,6 +19,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 代码生成器
@@ -28,7 +33,14 @@ public class SysGeneratorService {
 	@Autowired
 	private SysGeneratorDao sysGeneratorDao;
 
+	@Autowired
+	private ProjectInfoDao projectInfoDao;
+
 	public List<Map<String, Object>> queryList(Map<String, Object> map) {
+		ProjectInfoEntity projectInfoEntity= projectInfoDao.selectById((Long)map.get("projectId"));
+		if(Objects.nonNull(projectInfoEntity)){
+			map.put("databaseName",projectInfoEntity.getDatabaseName());
+		}
 		return sysGeneratorDao.queryList(map);
 	}
 

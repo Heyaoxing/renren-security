@@ -7,7 +7,8 @@
     <resultMap type="io.renren.modules.sys.entity.ProjectInfoEntity" id="BaseResultMap">
         <result property="projectId" column="project_id"/>
         <result property="name" column="name"/>
-        <result property="descript" column="descript"/>
+        <result property="name" column="name"/>
+        <result property="databaseName" column="databaseName"/>
         <result property="createdTm" column="created_tm"/>
         <result property="createdEmp" column="created_emp"/>
     </resultMap>

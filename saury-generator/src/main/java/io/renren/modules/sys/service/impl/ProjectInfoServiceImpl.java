@@ -26,4 +26,13 @@ public class ProjectInfoServiceImpl extends ServiceImpl<ProjectInfoDao, ProjectI
         return new PageUtils(page);
     }
 
+    /**
+     * 获取项目详情
+     * @param projectId
+     * @return
+     */
+    @Override
+    public ProjectInfoEntity getDetail(Long projectId){
+        return this.selectById(projectId);
+    }
 }

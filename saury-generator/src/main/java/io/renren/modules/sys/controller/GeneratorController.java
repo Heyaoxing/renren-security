@@ -3,6 +3,8 @@ package io.renren.modules.sys.controller;
 import io.renren.common.utils.PageUtils;
 import io.renren.common.utils.Query;
 import io.renren.common.utils.R;
+import io.renren.modules.sys.model.MenuTemplateDTO;
+import io.renren.modules.sys.service.MenuTemplateService;
 import io.renren.modules.sys.service.impl.SysGeneratorService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +31,9 @@ import java.util.Map;
 public class GeneratorController extends AbstractController{
 	@Autowired
 	private SysGeneratorService sysGeneratorService;
-	
+
+	@Autowired
+	private MenuTemplateService menuTemplateService;
 	/**
 	 * 列表
 	 */
@@ -58,5 +62,16 @@ public class GeneratorController extends AbstractController{
         response.setContentType("application/octet-stream; charset=UTF-8");  
   
         IOUtils.write(data, response.getOutputStream());  
+	}
+
+	/**
+	 * 获取模版菜单下拉列表
+	 * @param projectId
+	 * @return
+	 */
+	@RequestMapping("/menuTemp")
+	public R queryMenuTemp(Long projectId){
+		List<MenuTemplateDTO> list=menuTemplateService.getSelectData(projectId);
+		return R.ok().put("list", list);
 	}
 }
